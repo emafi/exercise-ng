@@ -76,3 +76,16 @@ export const user = {
 	],
     gender: 'male' // Generi possibili: 'male', 'female', 'other'
 }
+
+export interface UserWithoutCompanies {
+    id: number,
+    name: string,
+    surname: string,
+    age: number,
+    dateOfBirth: string,
+    address: Address,
+    role: Role, 
+    username: string,
+    profilePhotoUrl: string,
+    gender: Gender
+}
