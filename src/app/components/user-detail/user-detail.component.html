@@ -1,1 +1,40 @@
-<p>user-detail component</p>
+ <!-- <div *ngFor="let item of user | keyvalue: keepOrder">
+    {{item.key}} : {{item.value}}
+</div>  -->
+
+<!-- <div *ngFor="let item of user | keyvalue: keepOrder">
+    <div *ngIf="!isPhoto(item.key) && !isObject(item.value)">
+        {{item.key | titlecase}} : {{item.value}}
+    </div>
+    <div *ngIf="isPhoto(item.key)">
+        <img src="{{item.value}}">
+    </div>
+    <div *ngIf="isObject(item.value)">
+        <strong>{{item.key | titlecase }}</strong> : {{ makeString(item.value) }}
+    </div> 
+</div>  -->
+
+<div>
+    <div>
+        <div>ID: {{user.id}}</div>
+        <div>Name: {{user.name}}</div>
+        <div>Surname:  {{ user.surname }}</div>
+        <div>Age: {{ user.age }}</div>
+        <div>Date of Birth: {{ user.dateOfBirth | date: 'dd MMMM yy'  }}</div>
+        <div><strong>Address:</strong></div>
+        <div>City: {{ user.address.city }}</div>
+        <div>Street: {{ user.address.street }}</div>
+        <div>Postal code: {{ user.address.postalCode }}</div>
+        <div>Role: {{ user.role }}</div>
+        <div>Username: {{user.username}}</div>
+        <div><img src="{{user.profilePhotoUrl}}"></div>
+        <div>gender: {{user.gender}}</div>
+        <div><strong>Company: {{user.companies[0].name}}</strong></div>
+        <div>Description: {{user.companies[0].description}}</div>
+        <div><strong>Company: {{user.companies[1].name}}</strong></div>
+        <div>Description: {{user.companies[1].description}}</div>
+
+    </div>
+</div>
+
+
