@@ -1,12 +1,19 @@
-<div class="container">
-    <ol>
-        <div *ngFor="let user of users">
-            <li><img src="{{user.profilePhotoUrl}}"> 
-                <strong>{{user.name}} {{user.surname}}</strong> 
-                {{user.age}}
-                {{user.address.city}}
-                <button (click)="delete(user.id)">Delete</button>
-            </li>
-        </div>
-    </ol>
-</div>
+    <div class="container">
+        <ol  *ngIf="users.length != 0; else noUser">
+            <div *ngFor="let user of users">
+                <li>
+                    <img src="{{user.profilePhotoUrl}}"> 
+                    <strong>{{user.name}} {{user.surname}}</strong> 
+                    {{user.age}}
+                    {{user.address.city}}
+                    <button (click)="delete(user.id)">Delete</button>
+                </li>
+            </div>
+        </ol>
+        <ng-template #noUser>Non sono presenti utenti</ng-template> 
+    </div>
+
+
+
+
+
