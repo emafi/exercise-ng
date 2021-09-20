@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { UserWithoutCompanies } from 'src/app/models/User';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { User, UserWithoutCompanies } from 'src/app/models/User';
 
 @Component({
   selector: 'app-user-single',
@@ -13,6 +13,10 @@ export class UserSingleComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  delete(id: number) {
+    this.users = this.users.filter(e => e.id !== id )
   }
 
 }

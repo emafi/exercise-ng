@@ -5,6 +5,7 @@
                 <strong>{{user.name}} {{user.surname}}</strong> 
                 {{user.age}}
                 {{user.address.city}}
+                <button (click)="delete(user.id)">Delete</button>
             </li>
         </div>
     </ol>
