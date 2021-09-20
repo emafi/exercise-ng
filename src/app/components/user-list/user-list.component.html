@@ -1,5 +1,5 @@
 <div class="container">
-    <ol>
+    <!-- <ol>
         <div *ngFor="let user of users">
             <li><img src="{{user.profilePhotoUrl}}"> 
                 <strong>{{user.name}} {{user.surname}}</strong> 
@@ -7,6 +7,6 @@
                 {{user.address.city}}
             </li>
         </div>
-    </ol>
-    <app-user-single></app-user-single>
+    </ol> -->
+    <app-user-single [users]="users"></app-user-single>
 </div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { UserWithoutCompanies } from 'src/app/models/User';
 
 @Component({
   selector: 'app-user-single',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-single.component.scss']
 })
 export class UserSingleComponent implements OnInit {
+   
+  @Input() users: UserWithoutCompanies [] = [];
 
   constructor() { }
 
