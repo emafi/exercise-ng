@@ -9,7 +9,6 @@ import { UserWithoutCompanies } from 'src/app/models/User';
 export class UserSingleComponent implements OnInit {
    
   @Input() users: UserWithoutCompanies [] = [];
-  user: any;
 
   constructor() { }
 
