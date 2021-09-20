@@ -1,7 +1,7 @@
     <div class="container">
         <ol  *ngIf="users.length != 0; else noUser">
             <div *ngFor="let user of users">
-                <li>
+                <li [ngStyle]="{'border': user.role == 'staff' ? '2px solid purple' : (user.role== 'manager' ? '2px solid grey' : '2px solid lightblue') }">
                     <img src="{{user.profilePhotoUrl}}"> 
                     <strong>{{user.name}} {{user.surname}}</strong> 
                     {{user.age}}

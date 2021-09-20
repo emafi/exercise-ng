@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { UserWithoutCompanies } from 'src/app/models/User';
+import { Role, UserWithoutCompanies } from 'src/app/models/User';
 
 @Component({
   selector: 'app-user-single',
@@ -9,7 +9,6 @@ import { UserWithoutCompanies } from 'src/app/models/User';
 export class UserSingleComponent implements OnInit {
    
   @Input() users: UserWithoutCompanies [] = [];
-  user: any;
 
   constructor() { }
 
@@ -19,4 +18,5 @@ export class UserSingleComponent implements OnInit {
   delete(id: number) {
     this.users = this.users.filter(e => e.id !== id )
   }
+
 }
